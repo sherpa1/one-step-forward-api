@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "steps",
+  "info": {
+    "name": "steps"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "date": {
+      "type": "date",
+      "required": true
+    },
+    "total": {
+      "type": "integer",
+      "required": true,
+      "default": 0
+    },
+    "people": {
+      "model": "people",
+      "via": "steps"
+    }
+  }
+}

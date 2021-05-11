@@ -1,0 +1,60 @@
+{
+  "kind": "collectionType",
+  "collectionName": "people",
+  "info": {
+    "name": "people"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "firstname": {
+      "type": "string",
+      "required": true,
+      "maxLength": 24,
+      "minLength": 2
+    },
+    "lastname": {
+      "type": "string",
+      "required": true,
+      "maxLength": 24,
+      "minLength": 2
+    },
+    "gender": {
+      "type": "enumeration",
+      "enum": [
+        "male",
+        "female"
+      ]
+    },
+    "birthday": {
+      "type": "date"
+    },
+    "weight": {
+      "type": "integer",
+      "required": true
+    },
+    "height": {
+      "type": "integer",
+      "required": true
+    },
+    "bmi": {
+      "type": "enumeration",
+      "enum": [
+        "underweight",
+        "normal",
+        "overweight",
+        "obesity"
+      ],
+      "required": true,
+      "default": "normal"
+    },
+    "steps": {
+      "via": "people",
+      "collection": "steps"
+    }
+  }
+}
