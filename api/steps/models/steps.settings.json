@@ -21,8 +21,8 @@
       "default": 0
     },
     "people": {
-      "model": "people",
-      "via": "steps"
+      "via": "steps",
+      "model": "people"
     }
   }
 }
